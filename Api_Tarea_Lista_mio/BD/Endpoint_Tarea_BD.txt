@@ -1,0 +1,259 @@
+
+
+///////// LISTAR
+
+
+GET
+ http://localhost:8080/api/tareas
+
+
+RESPONSE
+[
+    {
+        "id": 1,
+        "nombre": "ESTUDIAR",
+        "descripcion": "ESTUDIAR INGLES",
+        "fecha": "2024-05-01T15:25:03.914+00:00",
+        "estado": "PENDIENTE"
+    },
+    {
+        "id": 2,
+        "nombre": "GIMNASIO",
+        "descripcion": "IR AL GIMNASIO",
+        "fecha": "2024-05-01T15:25:03.914+00:00",
+        "estado": "FINALIZADO"
+    },
+    {
+        "id": 3,
+        "nombre": "ESTUDIAR MATEMATICA",
+        "descripcion": "ESTUDIAR MATEMATICA",
+        "fecha": "2024-05-01T15:25:03.914+00:00",
+        "estado": "PENDIENTE"
+    }
+]
+
+
+
+
+/////////////// INSERTAR TODOS
+POST
+http://localhost:8080/api/tareas
+
+ 
+
+[
+    {
+        "id": 1,
+        "nombre": "ESTUDIAR",
+        "descripcion": "ESTUDIAR INGLES",
+        "fecha": "2024-05-01T15:25:03.914+00:00",
+        "estado": "PENDIENTE"
+    },
+    {
+        "id": 2,
+        "nombre": "GIMNASIO",
+        "descripcion": "IR AL GIMNASIO",
+        "fecha": "2024-05-01T15:25:03.914+00:00",
+        "estado": "FINALIZADO"
+    },
+    {
+        "id": 3,
+        "nombre": "ESTUDIAR MATEMATICA",
+        "descripcion": "ESTUDIAR MATEMATICA",
+        "fecha": "2024-05-01T15:25:03.914+00:00",
+        "estado": "PENDIENTE"
+    }
+]
+
+[
+    {
+        "id": 1,
+        "nombre": "ESTUDIAR",
+        "descripcion": "ESTUDIAR INGLES",
+        "fecha": "2024-05-01T15:58:38.825+00:00",
+        "estado": "PENDIENTE"
+    },
+    {
+        "id": 2,
+        "nombre": "GIMNASIO",
+        "descripcion": "IR AL GIMNASIO",
+        "fecha": "2024-05-01T15:58:38.825+00:00",
+        "estado": "FINALIZADO"
+    },
+    {
+        "id": 3,
+        "nombre": "ESTUDIAR MATEMATICA",
+        "descripcion": "ESTUDIAR MATEMATICA",
+        "fecha": "2024-05-01T15:58:38.825+00:00",
+        "estado": "PENDIENTE"
+    },
+    {
+        "id": 1,
+        "nombre": "ESTUDIAR",
+        "descripcion": "ESTUDIAR INGLES",
+        "fecha": "2024-05-01T15:25:03.914+00:00",
+        "estado": "PENDIENTE"
+    },
+    {
+        "id": 2,
+        "nombre": "GIMNASIO",
+        "descripcion": "IR AL GIMNASIO",
+        "fecha": "2024-05-01T15:25:03.914+00:00",
+        "estado": "FINALIZADO"
+    },
+    {
+        "id": 3,
+        "nombre": "ESTUDIAR MATEMATICA",
+        "descripcion": "ESTUDIAR MATEMATICA",
+        "fecha": "2024-05-01T15:25:03.914+00:00",
+        "estado": "PENDIENTE"
+    }
+]
+
+///////// INSERTAR
+
+POST
+ http://localhost:8080/api/tarea
+
+
+{
+    "id": 4,
+    "nombre": "LIMPIAR HABITACION",
+    "descripcion": "LIMPIAR HABITACION",
+    "fecha": "2024-05-01T14:57:18.103+00:00",
+    "estado": "PENDIENTE"
+}
+
+
+
+
+{
+    "id": 3,
+    "nombre": "ESTUDIAR MATEMATICA",
+    "descripcion": "ESTUDIAR MATEMATICA",
+    "fecha": "2024-04-17T00:00:00.000+0000",
+    "estado": "PENDIENTE"
+}
+
+ 
+[
+    {
+        "id": 1,
+        "nombre": "ESTUDIAR",
+        "descripcion": "ESTUDIAR INGLES",
+        "fecha": "2024-05-01T15:25:03.914+00:00",
+        "estado": "PENDIENTE"
+    },
+    {
+        "id": 2,
+        "nombre": "GIMNASIO",
+        "descripcion": "IR AL GIMNASIO",
+        "fecha": "2024-05-01T15:25:03.914+00:00",
+        "estado": "FINALIZADO"
+    },
+    {
+        "id": 3,
+        "nombre": "ESTUDIAR MATEMATICA",
+        "descripcion": "ESTUDIAR MATEMATICA",
+        "fecha": "2024-05-01T15:25:03.914+00:00",
+        "estado": "PENDIENTE"
+    },
+    {
+        "id": 4,
+        "nombre": "LIMPIAR HABITACION",
+        "descripcion": "LIMPIAR HABITACION",
+        "fecha": "2024-05-01T14:57:18.103+00:00",
+        "estado": "PENDIENTE"
+    }
+]
+
+
+////////// EDITAR
+
+PUT
+http://localhost:8080/api/tarea/3
+
+ 
+{
+    "nombre": "ESTUDIAR MATEMATICA MODIFICADO",
+    "descripcion": "ESTUDIAR MATEMATICA",
+    "fecha": "2024-05-01T15:25:03.914+00:00",
+    "estado": "PENDIENTE"
+}
+
+
+
+
+
+[
+    {
+        "id": 1,
+        "nombre": "ESTUDIAR",
+        "descripcion": "ESTUDIAR INGLES",
+        "fecha": "2024-05-01T15:51:22.306+00:00",
+        "estado": "PENDIENTE"
+    },
+    {
+        "id": 2,
+        "nombre": "GIMNASIO",
+        "descripcion": "IR AL GIMNASIO",
+        "fecha": "2024-05-01T15:51:22.306+00:00",
+        "estado": "FINALIZADO"
+    },
+    {
+        "id": 3,
+        "nombre": "ESTUDIAR MATEMATICA MODIFICADO",
+        "descripcion": "ESTUDIAR MATEMATICA",
+        "fecha": "2024-05-01T15:25:03.914+00:00",
+        "estado": "PENDIENTE"
+    }
+]
+
+
+////////////////// BUSCAR 
+
+GET 
+ http://localhost:8080/api/tarea/2
+
+{
+    "id": 2,
+    "nombre": "GIMNASIO",
+    "descripcion": "IR AL GIMNASIO",
+    "fecha": "2024-05-01T15:51:22.306+00:00",
+    "estado": "FINALIZADO"
+}
+
+
+////////// ELIMINAR
+
+DELETE
+ http://localhost:8080/api/tarea/1
+ 
+Response
+[
+    {
+        "id": 1,
+        "nombre": "ESTUDIAR",
+        "descripcion": "ESTUDIAR INGLES",
+        "fecha": "2024-05-01T15:46:22.901+00:00",
+        "estado": "PENDIENTE"
+    },
+    {
+        "id": 3,
+        "nombre": "ESTUDIAR MATEMATICA",
+        "descripcion": "ESTUDIAR MATEMATICA",
+        "fecha": "2024-05-01T15:46:22.901+00:00",
+        "estado": "PENDIENTE"
+    }
+]
+
+
+
+////////// ELIMINAR TODO
+
+
+DELETE
+ http://localhost:8080/api/tareas
+
+
+[]

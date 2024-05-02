@@ -1,0 +1,249 @@
+
+
+///////// LISTAR
+
+
+GET
+ http://localhost:8080/api/tareas
+
+
+RESPONSE
+[
+    {
+        "id": 1,
+        "nombre": "ESTUDIAR",
+        "descripcion": "ESTUDIAR INGLES",
+        "fecha": "2024-04-17T05:00:00.000+0000",
+        "estado": "PENDIENTE"
+    },
+    {
+        "id": 2,
+        "nombre": "IR AL GIMNASIO",
+        "descripcion": "IR AL GIMNASIO",
+        "fecha": "2024-04-18T05:00:00.000+0000",
+        "estado": "FINALIZADO"
+    }
+]
+
+
+/////////////// INSERTAR TODOS
+POST
+http://localhost:8080/api/tareas
+
+ 
+
+[
+    {
+        "id": 1,
+        "nombre": "ESTUDIAR MATEMATICA",
+        "descripcion": "ESTUDIAR MATEMATICA",
+        "fecha": "2024-04-17T00:00:00.000+00:00",
+        "estado": "PENDIENTE"
+    },
+    {
+        "id": 2,
+        "nombre": "ESTUDIAR INGLES",
+        "descripcion": "ESTUDIAR INGLES",
+        "fecha": "2022-04-20T00:00:00.000+00:00",
+        "estado": "FINALIZADO"
+    }
+]
+
+
+
+[
+    {
+        "id": 1,
+        "nombre": "ESTUDIAR MATEMATICA",
+        "descripcion": "ESTUDIAR MATEMATICA",
+        "fecha": "2024-04-17T00:00:00.000+00:00",
+        "estado": "PENDIENTE"
+    },
+    {
+        "id": 2,
+        "nombre": "ESTUDIAR INGLES",
+        "descripcion": "ESTUDIAR INGLES",
+        "fecha": "2022-04-20T00:00:00.000+00:00",
+        "estado": "FINALIZADO"
+    }
+]
+
+
+
+
+
+
+///////// INSERTAR
+
+POST
+ http://localhost:8080/api/tarea
+
+
+{
+    "nombre": "ESTUDIAR MATEMATICA",
+    "descripcion": "ESTUDIAR MATEMATICA",
+    "fecha": "2024-04-17",
+    "estado": "PENDIENTE"
+}
+
+
+
+
+
+{
+    "id": 3,
+    "nombre": "ESTUDIAR MATEMATICA",
+    "descripcion": "ESTUDIAR MATEMATICA",
+    "fecha": "2024-04-17T00:00:00.000+0000",
+    "estado": "PENDIENTE"
+}
+
+-----------------
+
+{
+    "nombre": "ESTUDIAR INGLES",
+    "descripcion": "ESTUDIAR INGLES",
+    "fecha": "2022-04-20",
+    "estado": "FINALIZADO"
+}
+
+
+{
+    "id": 2,
+    "nombre": "ESTUDIAR INGLES",
+    "descripcion": "ESTUDIAR INGLES",
+    "fecha": "2022-04-20T00:00:00.000+00:00",
+    "estado": "FINALIZADO"
+}
+
+
+
+////////// EDITAR
+
+PUT
+ http://localhost:8080/api/tarea/1
+
+{
+    "nombre": "ESTUDIAR MATEMATICA MODIFICADO",
+    "descripcion": "ESTUDIAR MATEMATICA",
+    "fecha": "2024-04-17",
+    "estado": "FINALIZADO"
+}
+
+
+{
+    "id": 1,
+    "nombre": "ESTUDIAR MATEMATICA MODIFICADO",
+    "descripcion": "ESTUDIAR MATEMATICA",
+    "fecha": "2024-04-17T00:00:00.000+00:00",
+    "estado": "FINALIZADO"
+}
+
+Response
+
+{
+    "id": 3,
+    "nombre": "ESTUDIAR MATEMATICA MODIFICADO",
+    "descripcion": "ESTUDIAR MATEMATICA",
+    "fecha": "2024-04-17T00:00:00.000+0000",
+    "estado": "FINALIZADO"
+}
+
+
+
+////////////////// BUSCAR  ID
+
+GET 
+http://localhost:8080/api/tarea/2
+
+{
+    "id": 2,
+    "nombre": "ESTUDIAR INGLES",
+    "descripcion": "ESTUDIAR INGLES",
+    "fecha": "2022-04-20T00:00:00.000+00:00",
+    "estado": "FINALIZADO"
+}
+
+
+
+////////////////// BUSCAR ESTADO
+
+GET 
+ http://localhost:8080/api/tarea/estado/FINALIZADO
+
+[
+    {
+        "id": 2,
+        "nombre": "ESTUDIAR INGLES",
+        "descripcion": "ESTUDIAR INGLES",
+        "fecha": "2022-04-20T00:00:00.000+00:00",
+        "estado": "FINALIZADO"
+    }
+]
+
+
+ http://localhost:8080/api/tarea/estado/PENDIENTE
+
+[
+    {
+        "id": 1,
+        "nombre": "ESTUDIAR MATEMATICA",
+        "descripcion": "ESTUDIAR MATEMATICA",
+        "fecha": "2024-04-17T00:00:00.000+00:00",
+        "estado": "PENDIENTE"
+    }
+]
+
+
+
+
+
+
+////////////////// BUSCAR FECHA
+
+GET 
+ http://localhost:8080/api/tarea/fecha?fecha1=2021-04-17&fecha2=2023-04-17
+
+[
+    {
+        "id": 2,
+        "nombre": "ESTUDIAR INGLES",
+        "descripcion": "ESTUDIAR INGLES",
+        "fecha": "2022-04-20T00:00:00.000+00:00",
+        "estado": "FINALIZADO"
+    }
+]
+
+
+ http://localhost:8080/api/tarea/fecha?fecha1=2023-04-17&fecha2=2025-04-17
+
+[
+    {
+        "id": 1,
+        "nombre": "ESTUDIAR MATEMATICA",
+        "descripcion": "ESTUDIAR MATEMATICA",
+        "fecha": "2024-04-17T00:00:00.000+00:00",
+        "estado": "PENDIENTE"
+    }
+]
+
+
+
+////////// ELIMINAR
+
+DELETE
+ http://localhost:8080/api/tarea/1
+ 
+Response
+Registro Eliminado 
+
+
+
+////////// ELIMINAR TODO
+
+
+DELETE
+ http://localhost:8080/api/tareas
+
+
+Todos Los Registro Eliminado
