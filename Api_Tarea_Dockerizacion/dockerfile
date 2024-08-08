@@ -1,0 +1,4 @@
+FROM openjdk:17-jdk-slim
+COPY target/Api_Tarea-0.0.1-SNAPSHOT.jar api_tarea.jar
+ENTRYPOINT ["java", "-jar", "api_tarea.jar"]
+EXPOSE 8080

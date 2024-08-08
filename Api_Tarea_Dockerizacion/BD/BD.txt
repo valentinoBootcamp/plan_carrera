@@ -1,0 +1,26 @@
+
+drop database api_tarea;
+create database api_tarea;
+use api_tarea;
+
+show tables;
+  
+ select *
+ from api_tarea.tarea;
+  
+  CREATE TABLE tarea (
+	id int(11) NOT NULL AUTO_INCREMENT,
+	nombre varchar(50) NOT NULL,
+    descripcion varchar(200) NOT NULL,
+    estado varchar(50) NOT NULL,
+    fecha date NOT NULL, 
+	PRIMARY KEY (id)
+)  ;
+
+
+ 
+insert into tarea(nombre,descripcion,estado,fecha)values("ESTUDIAR","ESTUDIAR INGLES","PENDIENTE",now());
+insert into tarea(nombre,descripcion,estado,fecha)values("IR AL GIMNASIO","IR AL GIMNASIO","FINALIZADO",now());  
+
+select *
+from tarea;
